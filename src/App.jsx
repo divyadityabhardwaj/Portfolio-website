@@ -83,7 +83,7 @@ function App() {
         <section id="projects">
           <div className="project-1">
             <div className="image-container-1">
-              <img src="public\Default_a_vibrant_logo_for_Sentify_a_sentiment_classification_1.jpg" alt="Project Image" />
+              <img src="/Default_a_vibrant_logo_for_Sentify_a_sentiment_classification_1.jpg" alt="Project Image" />
             </div>
             <div className="content-container">
               <div className="description-1">
