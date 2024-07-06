@@ -27,16 +27,16 @@ body {
   color: #e2e8f0;
   overflow-y: auto; /* Add this to ensure the left column can scroll if needed */
 }
-
 .left-column h1 {
   font-family: 'Inter', sans-serif;
-  font-weight: 750;
+  font-weight: 700; /* Use 700 for bold weight */
   font-size: 48px;
   word-spacing: -0.025em;
   opacity: 0.9;
   margin-top: 70px;
   margin-left: 80px;
   color: #e2e8f0;
+  word-spacing: -1px;
 }
 
 .left-column p {
@@ -44,7 +44,9 @@ body {
   margin-left: 80px;
   margin-bottom: 80px;
 }
-
+section {
+  scroll-margin-top: 100px; /* Adjust this value as needed */
+}
 
 .right-column {
   width: 50%;
@@ -124,6 +126,7 @@ nav ul li:hover::before {
 
 .project-1,
 .experience {
+  width: 525px;
   margin-top: 100px;
   color: #e2e8f0;
   transition: background-color 0.5s ease, border-radius 0.5s ease, color 0.5s ease;
@@ -131,18 +134,16 @@ nav ul li:hover::before {
 
 .project-1:hover,
 .experience:hover {
+
   background-color: hsl(222, 47%, 21%);
   border-radius: 5px;
   color: rgb(96, 199, 165);
 }
-
-
 .project-1 {
   display: flex;
   align-items: flex-start;
   margin-top: 100px; /* Adjust as needed */
 }
-
 .image-container-1 {
   margin-top: 15px; /* Distance from top */
   margin-left: 15px; /* Distance from left */
@@ -150,16 +151,21 @@ nav ul li:hover::before {
 }
 
 .image-container-1 img {
-  max-width: 150px; /* Ensure image fits within its container */
+  max-width: 300px; /* Ensure image fits within its container */
   height: 80px;
   border-radius: 3px;
 }
 
+.content-container {
+  flex: 1; /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+}
 .description-1  {
   margin-left: 15px; /* Distance between image and text */
   margin-right: 15px;
   text-align: left;
-  overflow-wrap: break-word;
+  overflow-wrap:normal;
 }
 
 .description-1 h1{
@@ -172,10 +178,20 @@ nav ul li:hover::before {
 .description-1 p {
   font-size: 16px;
   line-height: 1.5;
-  color: #555;
+  color: #94a3b8;
   overflow-wrap: break-word;
   font-size: 14px;
+
 }
+
+.tech-icon-main-1 {
+  margin: 15px;
+  display: flex;
+  flex-wrap: wrap; /* Allow icons to wrap if exceeding width */
+  gap: 10px; /* Adjust spacing between icons */
+}
+
+
 
 .exp-1 p{
   font-size: 16px;
@@ -233,10 +249,12 @@ nav ul li:hover::before {
 .social-icons svg {
   width: 24px; /* Adjust the width of the SVG icon */
   height: 24px; /* Adjust the height of the SVG icon */
-  fill: #333; /* Icon color */
+  fill: #94a3b8; /* Icon color */
   transition: fill 0.3s ease; /* Smooth transition for color change */
 }
 
 .social-icons a:hover svg {
   fill: #fff; /* Icon color on hover */
 }
+
+

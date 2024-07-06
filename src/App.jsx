@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-
-import { FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaAddressCard } from 'react-icons/fa';
+import TechIcon from './techIcon';
 
 
 
@@ -29,6 +28,7 @@ function App() {
   return (
     <div className="container">
     <div className="left-column">
+      
       <h1>Divyaditya Bhardwaj</h1>
       <p>Brief Bio</p>
       <nav>
@@ -64,12 +64,12 @@ function App() {
       </a>
         </div>
       </nav>
-  
-      
-    </div>
-  
+
+
 
       
+    </div>
+
       <div className="right-column">
         <section id="about">
           <p>As a budding programmer, I am focused on honing my
@@ -83,13 +83,25 @@ function App() {
         <section id="projects">
           <div className="project-1">
             <div className="image-container-1">
-              <img src=" /Screenshot 2024-07-02 155356.png" alt="Project Image" />
+              <img src="public\Default_a_vibrant_logo_for_Sentify_a_sentiment_classification_1.jpg" alt="Project Image" />
             </div>
-            <div className="description-1">
-              <h1>Sentify</h1>
-              <p>Description of the image goes here. Description of the image goes here. Description of the image goes here. Description of the image goes here. Description of the image goes here. Description of the image goes here.</p>
+            <div className="content-container">
+              <div className="description-1">
+                <h1>Sentify</h1>
+                <p>Sentify employs deep learning to classify sentiments in YouTube comments, providing accurate insights into audience reactions and sentiment trends for content creators and analysts.</p>
+              </div>
+              <div className='tech-icon-main-1'>
+                <TechIcon name="React"></TechIcon>
+                <TechIcon name="Python"></TechIcon>
+                <TechIcon name="HTML"></TechIcon>
+                <TechIcon name="CSS"></TechIcon>
+                <TechIcon name="JS"></TechIcon>
+                <TechIcon name="AIML"></TechIcon>
+                <TechIcon name="Deep Learning"></TechIcon>
+              </div>
             </div>
           </div>
+
         </section>
         <section id="experience">
           <div className="project-1">
@@ -100,6 +112,12 @@ function App() {
               <h1>Sentify</h1>
               <p>Description of the experience goes here..... Description of the experience goes here. Description of the experience goes here. Description of the experience goes here. Description of the experience goes here. Description of the experience goes here.</p>
             </div>
+            
+
+
+
+
+
           </div>
         </section>
       </div>

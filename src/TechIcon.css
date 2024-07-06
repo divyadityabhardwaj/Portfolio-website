@@ -1,0 +1,12 @@
+.tech-icon-div {
+    padding: 11px;
+    height: 20px;
+    width: fit-content;
+    border-radius: 11px;
+    background-color: rgba(35, 209, 168, 0.2); /* hsl(171, 77%, 44%) converted to rgba with opacity */
+    display: flex;
+    align-items: center;
+    color: hsl(171, 77%, 64%);
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+}
