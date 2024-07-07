@@ -13,27 +13,42 @@ function App() {
     const spotlight = document.createElement('div');
     spotlight.className = 'spotlight';
     document.body.appendChild(spotlight);
-
+  
     const handleMouseMove = (e) => {
       const x = e.clientX;
       const y = e.clientY;
-      spotlight.style.background = `radial-gradient(600px at ${x}px ${y}px,  rgba(29, 78, 216, 0.15), transparent 80%)`;
+      spotlight.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
     };
-
+  
+    const handleResize = () => {
+      // Check window width and remove gradient if below a certain threshold (e.g., 768px)
+      if (window.innerWidth <= 768) {
+        spotlight.style.display = 'none'; // Hide the spotlight on smaller screens
+      } else {
+        spotlight.style.display = 'block'; // Ensure spotlight is visible on larger screens
+      }
+    };
+  
+    // Initial check on component mount
+    handleResize();
+  
     document.addEventListener('mousemove', handleMouseMove);
-
+    window.addEventListener('resize', handleResize);
+  
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
       document.body.removeChild(spotlight);
     };
   }, []);
+  
 
   return (
     <div className="container">
     <div className="left-column">
       
       <h1>Divyaditya Bhardwaj</h1>
-      <p>AI/ML DL enthusiast , Web development </p>
+      <p className='bio'>AI/ML DL enthusiast , Web development </p>
       <nav>
         <ul>
           <li><a href="#about">ABOUT</a></li>
@@ -78,10 +93,13 @@ function App() {
 
       <div className="right-column">
         <section id="about">
+          <div className='about-header'>
           <p>As an aspiring programmer, I am honing skills in Python, Java, and C++. With experience in HTML, CSS, JavaScript, 
-             React, and exposure to Machine Learning, Deep Learning. I am dedicated to continuous learning 
+             React, and exposure to Machine Learning, Deep Learning.<br></br> <p></p>I am dedicated to continuous learning 
              and problem-solving. I bring adaptability and a keen interest in innovation to contribute effectively to 
              team environments.</p>
+             </div>
+
         </section>
 
         <section id="projects">

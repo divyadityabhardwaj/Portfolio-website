@@ -295,3 +295,169 @@ nav ul li:hover::before {
 }
 
 
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto; /* Allow container to expand */
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    padding: 20px;
+    overflow: visible; /* Ensure both columns are visible */
+    height: auto; /* Allow both columns to expand */
+
+
+  }
+
+  .left-column h1 {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .left-column p{
+    margin-bottom: 70px;
+    margin-left: 20px;
+  }
+
+
+  .about-header {
+    padding: 20px;
+    text-align: justify; /* Justify the text */
+    font-size: 16px; /* Adjust font size for readability */
+    line-height: 26px; /* Improve readability with proper line height */
+    color: #94a3b8;
+    word-spacing: -1.5px;
+    margin-bottom: -50px;
+  }
+  #projects .project-1{
+    margin-bottom: -50px;
+    
+  }
+
+
+
+  .right-column {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+  }
+
+  nav li a{
+    display: none;
+  }
+
+  nav ul li::before {
+    width: 0px; /* Set width to original size */
+  }
+
+  .social-icons{
+    margin-left: 10px;
+    margin-top: -50px;
+  }
+
+ 
+  body {
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
+
+  .project-1 {
+    display: flex;
+    width:auto;
+    flex-direction: column;
+    gap: 0px; /* Add space between sections */
+  }
+
+  .content-container {
+    order: 1; /* Move content container above image container */
+    padding: 0px;
+    text-align: justify;
+  }
+
+  .header-with-arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Adjust spacing */
+  }
+
+  .description-1 {
+    margin-bottom: 0px; /* Adjust spacing */
+  }
+
+  .tech-icon-main-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .image-container-1 {
+    order: 2; /* Move image container below content container */
+    text-align: center;
+    padding-right: 15px;
+  }
+
+  .image-container-1 img {
+    max-width: 200px; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 3px;
+  }
+
+
+
+    
+    .header-section {
+      display: block;
+      padding: 20px 0;
+      text-align: left;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px; /* Add margin for spacing */
+    }
+  
+    #about .about-header::before,
+    #projects .project-1::before,
+    #experience .project-1::before {
+      content: attr(data-heading); /* Use data attribute content for dynamic text */
+      display: flex;
+      position: sticky;
+      top: 0;
+      padding: 10px 0;
+      background-color: #0f172a;
+      opacity: .9;
+      color: #e2e8f0;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      z-index: 100;
+      width: 100%; /* Make the header full width */
+      left: 0; /* Ensure it spans the entire width */
+    }
+  
+    /* Adjust section margins */
+    section {
+      scroll-margin-top: 20px; /* Add margin to offset header */
+    }
+  
+    /* Adjust padding for individual sections */
+    #about .about-header::before {
+      content: "ABOUT";
+    }
+  
+    #projects .project-1::before {
+      content: "PROJECTS";
+      padding-left: 10px;
+
+    }
+  
+    #experience .project-1::before {
+      content: "EXPERIENCE";
+      padding-left: 10px;
+
+    }
+  }
+
